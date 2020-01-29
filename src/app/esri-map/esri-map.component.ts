@@ -76,6 +76,9 @@ export class EsriMapComponent implements OnInit {
       const layer = new EsriFeatureLayer({
         url:"https://gis.davey.com/arcgis/rest/services/TracyCA/TracyCA_2020/MapServer/8"
       })
+      const layer2 = new EsriFeatureLayer({
+        url:"https://gis.davey.com/arcgis/rest/services/TracyCA/TracyCA_2020/MapServer/0"
+      })
       // Set type of map
       const mapProperties: esri.MapProperties = {
         basemap: this._basemap,
@@ -87,7 +90,8 @@ export class EsriMapComponent implements OnInit {
         center: [-121.448637, 37.724050],
       });
       
-       map.layers.add(layer);
+       map.add(layer);
+       map.add(layer2)
       // Set type of map view
       const mapViewProperties: esri.MapViewProperties = {
         container: this.mapViewEl.nativeElement,
