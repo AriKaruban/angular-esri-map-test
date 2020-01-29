@@ -3,13 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { EsriMapComponent } from './esri-map/esri-map.component';
-import { TopBarComponent } from './top-bar/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EsriMapComponent,
-    TopBarComponent
+    EsriMapComponent
   ],
   imports: [
     BrowserModule
